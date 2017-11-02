@@ -24,7 +24,7 @@ class Folder(object):
         self.refresh()
 
     def __str__(self):
-        folder_name = imapUTF7Decode(str(self.folder_name))
+        folder_name = imap_utf7.imapUTF7Decode(str(self.folder_name))
         return " %s [%d/%d]" % (folder_name, self.unread_count, self.all_count)
 
     def __unicode__(self):
